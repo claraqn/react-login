@@ -1,6 +1,5 @@
 const { createProxyMiddleware } = require('http-proxy-middleware');
-
-module.exports = function(app) {
+module.exports = function (app) {
   app.use(
     '/api',
     createProxyMiddleware({
@@ -9,3 +8,6 @@ module.exports = function(app) {
     })
   );
 };
+// CORS이슈, Proxy 설정
+// serverport : 5000
+// clientport : 3000
